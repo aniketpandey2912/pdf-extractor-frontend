@@ -1,0 +1,11 @@
+.page {
+  width: 100%; /* Pages take the full width by default */
+  height: 100%;
+}
+
+.checkbox_pageNo {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
