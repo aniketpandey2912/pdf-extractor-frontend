@@ -1,31 +1,45 @@
-.upload_container {
-  border: 1px solid red;
-  background: black;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px; /* Add some padding for better spacing */
+.form_container {
+  width: 100%;
+  border: 1px solid black;
 
-  /* Style the h2 element */
   h2 {
     font-size: 24px;
-    margin-bottom: 10px; /* Add some space below the heading */
   }
 
   /* Style the input element */
   input[type="file"] {
-    margin-top: 20px; /* Add space above the input element */
-    padding: 10px; /* Add padding to make it more clickable */
-    background: #007bff; /* Change the background color */
-    color: white; /* Change the text color */
+    margin-top: 20px;
+    padding: 10px;
+    background: #007bff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
 
   input[type="file"]:hover {
-    background: #0056b3; /* Change the background color on hover */
+    background: #0056b3;
   }
+}
+
+.pdf_from_backend {
+  width: "70%";
+  margin: "auto";
+}
+
+.upload_form {
+  border: 10px solid rgb(239, 67, 67);
+}
+
+.submitBtn {
+  margin-top: 10px;
+}
+
+form {
+  border: 1px solid red;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }

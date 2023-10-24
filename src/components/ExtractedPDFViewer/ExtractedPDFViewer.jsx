@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 
-import styles from "./PDFViewer.module.css";
+import styles from "./ExtractedPDFViewer.module.css";
 
-const PDFViewer = ({ pdfFile, onPageSelect, selectedPages }) => {
+const ExtractedPDFViewer = ({ extractedPdfFile }) => {
   pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
   const [numPages, setNumPages] = useState(null);
   const [width, setWidth] = useState(
@@ -27,22 +27,12 @@ const PDFViewer = ({ pdfFile, onPageSelect, selectedPages }) => {
     setNumPages(numPages);
   };
 
-  const handleCheckbox = (pageNumber, checked) => {
-    onPageSelect(pageNumber);
-  };
-
   const renderPages = () => {
     const pages = [];
     for (let i = 1; i <= numPages; i++) {
       pages.push(
         <div key={i} className={styles.page}>
           <div className={styles.checkbox_pageNo}>
-            <p>Select:</p>
-            <input
-              type="checkbox"
-              checked={selectedPages.includes(i)}
-              onChange={(e) => handleCheckbox(i, e.target.checked)}
-            />
             <h4>
               Page {i} of {numPages}
             </h4>
@@ -58,11 +48,9 @@ const PDFViewer = ({ pdfFile, onPageSelect, selectedPages }) => {
 
   return (
     <>
-      <h2>
-        Select Pages To be Extacted And Then Click On Generate Extracted PDF
-      </h2>
+      <h2>Extracted PDF From Backend</h2>
       <div className={styles.pdf_container}>
-        <Document file={pdfFile} onLoadSuccess={onDocumentLoadSuccess}>
+        <Document file={extractedPdfFile} onLoadSuccess={onDocumentLoadSuccess}>
           {renderPages()}
         </Document>
       </div>
@@ -70,4 +58,4 @@ const PDFViewer = ({ pdfFile, onPageSelect, selectedPages }) => {
   );
 };
 
-export default PDFViewer;
+export default ExtractedPDFViewer;
