@@ -3,7 +3,7 @@ import { Document, Page, pdfjs } from "react-pdf";
 
 import styles from "./PDFViewer.module.css";
 
-const PDFViewer = ({ pdfFile, onPageSelect, selectedPages }) => {
+const PDFViewer = ({ pdfFile, handlePageSelection, selectedPages }) => {
   pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
   const [numPages, setNumPages] = useState(null);
   const [width, setWidth] = useState(
@@ -28,9 +28,10 @@ const PDFViewer = ({ pdfFile, onPageSelect, selectedPages }) => {
   };
 
   const handleCheckbox = (pageNumber, checked) => {
-    onPageSelect(pageNumber);
+    handlePageSelection(pageNumber);
   };
 
+  // Render rect-pdf pages
   const renderPages = () => {
     const pages = [];
     for (let i = 1; i <= numPages; i++) {

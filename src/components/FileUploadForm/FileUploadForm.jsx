@@ -1,55 +1,41 @@
+import styles from "./FileUploadForm.module.css";
 import React, { useState } from "react";
 import axios from "axios";
-import styles from "./FileUploadForm.module.css";
 
 function FileUploadForm({
-  onPdfFileChange,
-  handleExtractFile,
+  handlePdfFileChange,
   handleServerFile,
+  handleFileName,
+  handleExtractFile,
+  emptyPageSelection,
 }) {
   const [selectedFile, setSelectedFile] = useState(null);
-  // const [selectedServerFile, setSelecServertedFile] = useState(null);
 
+  // Clear previous rendered UI
+  const cleanUp = () => {
+    handleExtractFile(null);
+    handlePdfFileChange(null);
+    handleExtractFile(null);
+    handleServerFile(null);
+    emptyPageSelection();
+  };
+
+  // When input file is selected
   const handleFileChange = (event) => {
+    // handleReset();
+    cleanUp();
     const file = event.target.files[0];
 
     if (file && file.type === "application/pdf") {
       setSelectedFile(file);
+      handleFileName(file.name);
     } else {
       setSelectedFile(null);
       alert("Please select a valid PDF file.");
     }
   };
 
-  // const getExtractedFile = (filename, selectedPages) => {
-  //   // Check if filename or selected pages missing
-  //   if (!filename || !selectedPages?.length) {
-  //     alert("Please provide valid filename and selected array of pages");
-  //   }
-  //   axios
-  //     .post(
-  //       "http://localhost:4500/file/extract",
-  //       {
-  //         filename, // Use the uploaded file name
-  //         selectedPages,
-  //       },
-  //       {
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         responseType: "arraybuffer",
-  //       }
-  //     )
-  //     .then((response) => {
-  //       const blob = new Blob([response.data], { type: "application/pdf" });
-  //       const pdfUrl = URL.createObjectURL(blob);
-  //       handleExtractFile(pdfUrl);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error:", error);
-  //     });
-  // };
-
+  // On Form Submit
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
@@ -71,9 +57,8 @@ function FileUploadForm({
       .then((response) => {
         const blob = new Blob([response.data], { type: "application/pdf" });
         const pdfUrl = URL.createObjectURL(blob);
-        // setSelecServertedFile(pdfUrl);
         handleServerFile(pdfUrl);
-        onPdfFileChange(pdfUrl);
+        handlePdfFileChange(pdfUrl);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -96,20 +81,6 @@ function FileUploadForm({
         <button type="submit">Click To Upload File On Server</button>
       </form>
 
-      {/* <div>
-        {selectedServerFile && (
-          <button
-            onClick={() =>
-              getExtractedFile(
-                "83463ea0-7290-11ee-9ab6-df446a9e71fc-Aniket-Pandey-Resume.pdf",
-                [0]
-              )
-            }
-          >
-            Get Extracted PDF
-          </button>
-        )}
-      </div> */}
       <div>
         {selectedFile && (
           <div className="upload_file_info">
