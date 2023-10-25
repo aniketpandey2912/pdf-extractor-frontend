@@ -10,7 +10,7 @@ import axios from "axios";
 const getExtractedFile = (filename, selectedPages, handleExtractFile) => {
   // Check if filename or selected pages missing
   if (!filename || selectedPages?.length <= 0) {
-    alert("Please provide valid filename and select alt 1 page");
+    alert("Please provide valid filename and select aleast 1 page");
     return;
   }
   axios
