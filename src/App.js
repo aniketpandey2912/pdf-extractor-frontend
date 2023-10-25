@@ -67,7 +67,7 @@ function App() {
         </button>
       )}
       {downloadLink && (
-        <div>
+        <div className="download_link_div">
           <h3>Click on link below to download you extracted PDF File</h3>
           <p>
             <a href={downloadLink} download="new-extracted.pdf">

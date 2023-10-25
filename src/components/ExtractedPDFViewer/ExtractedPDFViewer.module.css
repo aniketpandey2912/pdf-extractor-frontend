@@ -4,8 +4,9 @@
 }
 
 .checkbox_pageNo {
-  background-color: green;
+  background-color: rgb(128, 128, 128);
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }

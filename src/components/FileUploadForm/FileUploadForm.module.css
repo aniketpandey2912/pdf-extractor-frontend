@@ -1,6 +1,6 @@
 .form_container {
   width: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 
   h2 {
     font-size: 24px;
@@ -21,21 +21,8 @@
   }
 }
 
-.pdf_from_backend {
-  width: "70%";
-  margin: "auto";
-}
-
-.upload_form {
-  border: 10px solid rgb(239, 67, 67);
-}
-
-.submitBtn {
-  margin-top: 10px;
-}
-
 form {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 10px;
   display: flex;
   flex-direction: column;

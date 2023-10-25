@@ -34,3 +34,12 @@ button:hover {
     margin-top: 10px;
   }
 }
+
+.download_link_div {
+  background-color: rgb(151, 143, 245);
+  margin-top: 10px;
+}
+
+.download_link_div a {
+  color: rgb(173, 243, 9);
+}

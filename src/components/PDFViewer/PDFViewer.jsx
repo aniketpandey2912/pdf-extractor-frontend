@@ -60,7 +60,8 @@ const PDFViewer = ({ pdfFile, handlePageSelection, selectedPages }) => {
   return (
     <>
       <h2>
-        Select Pages To be Extacted And Then Click On Generate Extracted PDF
+        Select Pages To be Extacted And Then Click On
+        <span style={{ color: "red" }}> Get Extracted PDF </span>Button Above
       </h2>
       <div className={styles.pdf_container}>
         <Document file={pdfFile} onLoadSuccess={onDocumentLoadSuccess}>
