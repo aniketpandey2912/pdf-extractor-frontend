@@ -29,7 +29,7 @@
 <p>Click on link to open forntend app: [https://pdf-creator-frontend.vercel.app/]</p>
 
 <h3>Backend Repository Link</h3>
-<p>To view the frontend repository click on the link: [https://github.com/aniketpandey2912/pdf-extractor-backend-]</p>
+<p>To view the backend repository click on the link: [https://github.com/aniketpandey2912/pdf-extractor-backend-]</p>
 
 <h3>Different States Of App</h3>
 
