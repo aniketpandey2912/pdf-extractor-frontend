@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+<h3>Project Overview</h3>
+<p>It is a frontend side of the pdf-extractor project where you can:</p>
+<ul>
+    <li>Upload a PDF file and store it on the server.</li>
+    <li>Retrieve the stored PDF files for display.</li>
+    <li>Extract the selected pages from the original stored PDF and create a new PDF.</li>
+</ul>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3>Project Installation Steps:</h3>
 
-## Available Scripts
+1. Clone the backend repository:
 
-In the project directory, you can run:
+   ```
+   git clone https://github.com/aniketpandey2912/pdf-extractor-backend-.git
+   ```
 
-### `npm start`
+2. Install packages:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```
+   npm install
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Start server:
+   ```
+   npm run server
+   ```
 
-### `npm test`
+<h3>I have a deployed frontend on Vercel, so you don't need to clone the frontend repo. And, you can use the deployed link below for app demonstration.</h3>
+<p>Click on link to open forntend app: [https://pdf-creator-frontend.vercel.app/]</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3>Backend Repository Link</h3>
+<p>To view the frontend repository click on the link: [https://github.com/aniketpandey2912/pdf-extractor-backend]</p>
 
-### `npm run build`
+<h3>Different States Of App</h3>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h4>First View</h4>
+<image src="https://github.com/aniketpandey2912/pdf-extractor-frontend/blob/master/public/1.png?raw=true" width="100%" />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h4>When you select a file.</h4>
+<image src="https://github.com/aniketpandey2912/pdf-extractor-frontend/blob/master/public/2.png?raw=true" width="100%" />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h4>After you click on the upload file button.</h4>
+<image src="https://github.com/aniketpandey2912/pdf-extractor-frontend/blob/master/public/3.png?raw=true" width="100%" />
 
-### `npm run eject`
+<h4>After you select pages and click on the extract pdf button</h4>
+<image src="https://github.com/aniketpandey2912/pdf-extractor-frontend/blob/master/public/4.png?raw=true" width="100%" />
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h4>Once you click on download URL.</h4>
+<image src="https://github.com/aniketpandey2912/pdf-extractor-frontend/blob/master/public/5.png?raw=true" width="100%" />
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h4>Mobile View.</h4>
+<image src="https://github.com/aniketpandey2912/pdf-extractor-frontend/blob/master/public/6.png?raw=true" width="40%" />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p>Now you can open the downloaded file and enjoy the view :)</p>
